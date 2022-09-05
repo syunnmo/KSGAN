@@ -31,13 +31,6 @@ def main():
     parser.add_argument('--fold', type=str, default='1', help='number of fold')
     dataset = 'assist2012'
 
-    if dataset == 'assist2009_updated':
-        parser.add_argument('--batch_size', type=int, default=16, help='the batch size')
-        parser.add_argument('--n_knowledge_concept', type=int, default=110, help='the number of unique questions in the dataset')
-        parser.add_argument('--n_exercise', type=int, default=16891, help='the number of unique questions in the dataset')
-        parser.add_argument('--data_dir', type=str, default='./data/assist2009_updated', help='data directory')
-        parser.add_argument('--data_name', type=str, default='assist2009_updated', help='data set name')
-
     if dataset == 'assist2009_B':
         parser.add_argument('--batch_size', type=int, default=256, help='the batch size')
         parser.add_argument('--n_knowledge_concept', type=int, default=110, help='the number of unique questions in the dataset')
@@ -52,26 +45,12 @@ def main():
         parser.add_argument('--data_dir', type=str, default='./data/assist2012', help='data directory')
         parser.add_argument('--data_name', type=str, default='ASSISTments12', help='data set name')
 
-    if dataset == 'assist2017':
-        parser.add_argument('--batch_size', type=int, default=32, help='the batch size')
-        parser.add_argument('--n_knowledge_concept', type=int, default=102, help='the number of unique questions in the dataset')
-        parser.add_argument('--n_exercise', type=int, default=3162, help='the number of unique questions in the dataset')
-        parser.add_argument('--data_dir', type=str, default='./data/assist2017', help='data directory')
-        parser.add_argument('--data_name', type=str, default='assist2017', help='data set name')
-
     if dataset == 'slepemapy':
         parser.add_argument('--batch_size', type=int, default=32, help='the batch size')
         parser.add_argument('--n_knowledge_concept', type=int, default=1473, help='the number of unique questions in the dataset')
         parser.add_argument('--n_exercise', type=int, default=2946, help='the number of unique questions in the dataset')
         parser.add_argument('--data_dir', type=str, default='./data/slepemapy', help='data directory')
         parser.add_argument('--data_name', type=str, default='slepemapy', help='data set name')
-
-    if dataset == 'statics':
-        parser.add_argument('--batch_size', type=int, default=32, help='the batch size')
-        parser.add_argument('--n_knowledge_concept', type=int, default=98, help='the number of unique questions in the dataset')
-        parser.add_argument('--n_exercise', type=int, default=1223, help='the number of unique questions in the dataset')
-        parser.add_argument('--data_dir', type=str, default='./data/STATICS', help='data directory')
-        parser.add_argument('--data_name', type=str, default='STATICS', help='data set name')
 
     params = parser.parse_args()
     params.memory_size = params.n_knowledge_concept
