@@ -35,7 +35,6 @@ def train(epoch_num, model, params, optimizer, adj_exercise_kc, train_kc_data, t
         input_exercise = utils.varible(torch.LongTensor(exercise_one_seq), params.gpu)
         input_exercise_respond = utils.varible(torch.LongTensor(exercise_respond_batch_seq), params.gpu)
         target = utils.varible(torch.FloatTensor(target), params.gpu)
-        # 去掉第一个道题，第一道题不预测
         target = target[ : , 1 : ]
         target_to_1d = torch.chunk(target, target.shape[0], 0)
         target_1d = torch.cat([target_to_1d[i] for i in range(target.shape[0])], 1)
@@ -101,7 +100,6 @@ def test(model, params, optimizer, adj_exercise_kc, kc_data, exercise_data, exer
         input_exercise = utils.varible(torch.LongTensor(exercise_one_seq), params.gpu)
         input_exercise_respond = utils.varible(torch.LongTensor(exercise_respond_batch_seq), params.gpu)
         target = utils.varible(torch.FloatTensor(target), params.gpu)
-        # 去掉第一个道题，第一道题不预测
         target = target[:, 1:]
         target_to_1d = torch.chunk(target, target.shape[0], 0)
         target_1d = torch.cat([target_to_1d[i] for i in range(target.shape[0])], 1)
