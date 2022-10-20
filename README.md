@@ -3,5 +3,6 @@ This code is related to the paper "Knowledge Structure-Aware Graph-Attention Net
 
 # Dataset
 The processed datasets are placed in following links:
-* assistment2009:[download](https://drive.google.com/drive/folders/1P98MAs_z4KiApHWri0WkNzDgIBUcMICb?usp=sharing)
-
+* assistment2009 :[download](https://drive.google.com/drive/folders/1P98MAs_z4KiApHWri0WkNzDgIBUcMICb?usp=sharing)
+* assistment2012 :[download](https://drive.google.com/drive/folders/1P98MAs_z4KiApHWri0WkNzDgIBUcMICb?usp=sharing)
+* slepemapy.cz. :[download](https://drive.google.com/drive/folders/1P98MAs_z4KiApHWri0WkNzDgIBUcMICb?usp=sharing)
